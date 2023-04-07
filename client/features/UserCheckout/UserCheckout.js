@@ -67,7 +67,6 @@ const UserCheckout = () => {
               }
             </div>
           </div>
-
           <div className="checkoutPayment">
             <form className="checkoutForm">
               <div className="paymentHeader">Payment Info
