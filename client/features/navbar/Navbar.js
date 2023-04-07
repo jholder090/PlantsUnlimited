@@ -35,7 +35,7 @@ let UserCartSize = getCartSize(cart)
 
   return (
     <div className='header'>
-      <h1 className='siteTitle'>Welcome to the Plants Unlimited!</h1>
+      <h1 className='siteTitle'>Plants Unlimited</h1>
       <small>Shopping as: <strong>{username || "Guest"}</strong></small>
       <nav>
         {isLoggedIn ? (
