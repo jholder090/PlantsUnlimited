@@ -26,8 +26,8 @@ const AppRoutes = () => {
   }, []);
 
   return (
-    <div>
 
+    <>
       {isLoggedIn ? (
         <Routes>
           <Route path={`/usercart/${id}`} element={<UserCart />} />
@@ -55,8 +55,9 @@ const AppRoutes = () => {
           element={<AuthForm name="signup" displayName="Sign Up" />}
         />
         <Route path="/confirmation" element={<Confirmation />} />
-      </Routes>
-    </div>
+      </Routes></>
+
+
   );
 };
 

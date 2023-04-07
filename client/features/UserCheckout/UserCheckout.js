@@ -70,7 +70,8 @@ const UserCheckout = () => {
 
           <div className="checkoutPayment">
             <form className="checkoutForm">
-              <div className="paymentHeader">Payment Info</div>
+              <div className="paymentHeader">Payment Info
+              </div>
               <div className='paymentBody'>
                 <div className='paymentName'>
                   <label htmlFor="name">Billing Name</label>

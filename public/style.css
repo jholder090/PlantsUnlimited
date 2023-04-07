@@ -218,6 +218,7 @@ nav a {
 .checkout {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .checkoutHeader {
@@ -241,19 +242,21 @@ nav a {
 
 .checkoutMain {
   display: flex;
+  justify-content: space-around;
   margin: 0 20px 20px 20px;
   padding-top: 10px;
 }
 
 .checkoutCart {
   border: 1px solid black;
+  background-color: red;
   border-radius: 2%;
   box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content:flex-start;
-  width: 60%;
+  width: 50%;
 }
 
 .checkoutCartHeader {
@@ -311,11 +314,18 @@ nav a {
   border: 1px solid black;
   box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
   width: 50%;
-  height: 70%;
+  height: 60%;
 }
+
 @media only screen and (max-width: 900px) {
   .checkoutForm {
-    height: 44%;
+    height: 55%;
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1018px) {
+  .checkoutForm {
     width: 70%;
   }
 }
@@ -335,7 +345,7 @@ nav a {
   height: 85%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   margin: 0;
 }
