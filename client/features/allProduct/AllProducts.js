@@ -57,8 +57,6 @@ const AllProducts = () => {
   };
 
   return (
-    <>
-    {/* TESTING */}
     <div className="allProductsBackground">
       {user && user.isAdmin === true ?  <AddProduct /> : <div></div>}
       <h1 className="pageTitle">Our Plants & More</h1>
@@ -93,8 +91,7 @@ const AllProducts = () => {
             );
           })}
         </div>
-      </div></>
-
+      </div>
   );
 };
 

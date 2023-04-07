@@ -51,38 +51,43 @@ const UserCheckout = () => {
                 <button className="editButton">EDIT CART</button>
               </Link>
             </div>
-            {userCart && userCart.length ? userCart.map((item) => {
-              return (
-                <div className="checkoutProductContainer" key={item.product.id}>
-                  <h2 className="checkoutProductName">{item.product.name}</h2>
-                  <h4 className="checkoutProductPrice">${item.product.price}</h4>
-                  <h4 className="checkoutProductQty">Qty: {item.quantity}</h4>
-                  <img className="productImage" src={item.product.imageUrl} />
-                </div>
+            <div className='checkoutCartProducts'>
+              {userCart && userCart.length ? userCart.map((item) => {
+                return (
+                  <div className="checkoutProductContainer" key={item.product.id}>
+                    <h2 className="checkoutProductName">{item.product.name}</h2>
+                    <h4 className="checkoutProductPrice">${item.product.price}</h4>
+                    <h4 className="checkoutProductQty">Qty: {item.quantity}</h4>
+                    <img className="productImage" src={item.product.imageUrl} />
+                  </div>
+                )
+              }
               )
-            }
-            )
-              : "No Items in Cart"
-            }
+                : "No Items in Cart"
+              }
+            </div>
           </div>
 
           <div className="checkoutPayment">
             <form className="checkoutForm">
-              <h1 className="paymentHeader">Payment Info</h1>
-              <div>
-                <label htmlFor="name">Billing Name</label>
-                <input name="name" type="text" placeholder="Billing Name"></input>
-              </div>
-              <div>
-                <label htmlFor="billingAddress">Billing Address</label>
-                <input name="billingAddress" type="text" placeholder="Billing Address"></input>
-              </div>
-              <div>
-                <label htmlFor="creditCard">Credit Card Info</label>
-                <input name="creditCard" type="text" placeholder="Last 4 of Credit Card"></input>
+              <div className="paymentHeader">Payment Info</div>
+              <div className='paymentBody'>
+                <div className='paymentName'>
+                  <label htmlFor="name">Billing Name</label>
+                  <input name="name" type="text" placeholder="Billing Name"></input>
+                </div>
+                <div className='paymentAddress'>
+                  <label htmlFor="billingAddress">Billing Address</label>
+                  <input name="billingAddress" type="text" placeholder="Billing Address"></input>
+                </div>
+                <div className='paymentCard'>
+                  <label htmlFor="creditCard">Credit Card Info</label>
+                  <input name="creditCard" type="text" placeholder="Last 4 of Credit Card"></input>
+                </div>
               </div>
               <Link to="/confirmation">
-                <button className="checkoutButton">SUBMIT ORDER</button>
+                <button className="checkoutButton">SUBMIT ORDER
+                </button>
               </Link>
             </form>
           </div>

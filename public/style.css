@@ -250,6 +250,7 @@ nav a {
   border-radius: 2%;
   box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content:flex-start;
   width: 60%;
@@ -270,12 +271,25 @@ nav a {
   margin: 0;
 }
 
+.checkoutCartProducts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px, 20px;
+}
+
 .checkoutProductContainer {
   display: flex;
   flex-direction: column;
-  align-items:flex-start;
-  width: 23%;
-  margin: 20px 0 10px 10px;
+  align-items: center;
+  width: 20%;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 900px) {
+  .checkoutProductContainer {
+    width: 40%;
+  }
 }
 
 .checkoutProductContainer > * {
@@ -297,15 +311,42 @@ nav a {
   border: 1px solid black;
   box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
   width: 50%;
-  height: 350px;
+  height: 70%;
+}
+@media only screen and (max-width: 900px) {
+  .checkoutForm {
+    height: 44%;
+    width: 70%;
+  }
 }
 
 .paymentHeader {
-  margin-top: 5px;
+  margin: 0;
+  width: 90%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.paymentBody {
+  width: 75%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+
+label, input {
+  width: 100%
 }
 
 .checkoutButton {
   background-color: red;
+  margin-bottom: 5px;
 }
 
 /* ------------------------Confirmation-------------------- */
