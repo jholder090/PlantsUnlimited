@@ -17,7 +17,7 @@ const UserCheckout = () => {
 
   const getCartTotal = () => {
     let cartTotal = 0
-    for (let i = 0; i < userCart.length; i++) {
+    for (let i = 0; i < userCart.length; i ++) {
       let itemTotal = userCart[i].product.price * userCart[i].quantity;
       cartTotal += itemTotal
     }
